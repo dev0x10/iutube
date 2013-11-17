@@ -1,0 +1,20 @@
+<hr>
+<div class="media">
+    <a class="pull-left" ng-href="https://www.youtube.com/watch?v={{video.id}}" target="_blank" title="{{video.title}}">
+        <img class="media-object"  ng-src="{{video.thumbnail.sqDefault}}" alt="{{video.title}}">
+    </a>
+    <div class="media-body">
+        <button class="btn btn-sm btn-primary" ng-click="load(video.id)">Load Video</button>
+        <br>
+        <small class="media-heading"><a ng-href="https://www.youtube.com/watch?v={{video.id}}" target="_blank" title="{{video.title}}">{{video.title}}</a></small>
+        <br>
+        <small>{{video.description}}</small>
+        <br>
+        <small class="media-heading text-muted">by {{video.uploader}}</small>
+        <br>
+        <small class="media-heading text-muted" ng-if="video.viewCount > 0">Views: {{video.viewCount | number}}</small>
+        <small class="media-heading text-muted" ng-if="video.rating > 0"> | Rating: {{video.rating | number}}</small>
+        <small class="media-heading text-muted" ng-if="video.likeCount > 0"> | Like: {{video.likeCount | number}}</small>
+    </div>
+</div>
+

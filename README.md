@@ -17,6 +17,9 @@ What I learnt using Angular on this sample app:
 - Adding event listener on factory
 - Using broadcast to communicate with controller
 
+Missing:
+- e2e Test
+
 Demo site: http://playground.yauri.me/iutube
 NB: Sometimes the Youtube IFrame not loaded (just keep refresh your browser until you see Youtube player), I don't know the problem exactly but I think it's related to the web hosting.
 It's better to pull it and test on your local environment.

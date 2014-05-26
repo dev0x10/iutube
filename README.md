@@ -21,5 +21,5 @@ Missing:
 - e2e Test
 
 Demo site: http://playground.yauri.me/iutube
-NB: Sometimes the Youtube IFrame not loaded (just keep refresh your browser until you see Youtube player), I don't know the problem exactly but I think it's related to the web hosting.
-It's better to pull it and test on your local environment.
+Known Issue: 
+- Sometimes the Youtube IFrame not loaded (just keep refresh your browser until you see Youtube player). This is because I load the player in wrong way. Will fix it soon!

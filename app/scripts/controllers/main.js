@@ -20,27 +20,33 @@ angular.module('iutubeApp')
       YtPlayer.autorepeat = $scope.autorepeat;
     });
 
-    $scope.load = function(videoId){
-      if(videoId) {
-        YtPlayer.videoId = videoId;
-        YtPlayer.loadVideo();
-        return;
-      }
+    $scope.loadByKeypress = function ($event) {
+        if($event.charCode === 13) {
+            $scope.load();
+        }
+    };
 
-      if($scope.videoUrl !== undefined) {
-        var videoId = YtTool.parseUrl($scope.videoUrl);
-        if(videoId !== "") {
-          YtPlayer.videoId = videoId;
-          YtPlayer.loadVideo();
+    $scope.load = function (videoId) {
+        if (videoId) {
+            YtPlayer.videoId = videoId;
+            YtPlayer.loadVideo();
+            return;
+        }
+
+        if ($scope.videoUrl !== undefined) {
+            var videoId = YtTool.parseUrl($scope.videoUrl);
+            if (videoId !== "") {
+                YtPlayer.videoId = videoId;
+                YtPlayer.loadVideo();
+            }
+            else {
+                alert("Invalid Url");
+            }
         }
         else {
-          alert("Invalid Url");
+            alert("Invalid Url");
         }
-      }
-      else {
-        alert("Invalid Url");
-      }
-    }
+    };
 
     $scope.search = function() {
       if($scope.keyword !== undefined) {
@@ -52,8 +58,7 @@ angular.module('iutubeApp')
       }
     }
 
-    $scope.testChange = function() {
-      console.log("Set AutoRepeat to: " + $scope.autorepeat);
+    $scope.changeAutoRepeat = function() {
       YtPlayer.autorepeat = $scope.autorepeat;
     }
   });

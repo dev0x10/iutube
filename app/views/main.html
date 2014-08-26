@@ -11,9 +11,9 @@
             <div class="col-md-12">
                 <div class="input-group navbar-form">
                     <span class="input-group-btn">
-                        <button class="btn btn-primary" type="button" ng-click="load()">Load</button>
+                        <button class="btn btn-primary" type="submit" ng-click="load()">Load</button>
                     </span>
-                    <input type="text" class="form-control" ng-model="videoUrl" placeholder="YouTube Video URL">
+                    <input type="text" class="form-control" ng-model="videoUrl" ng-keypress="loadByKeypress($event)" placeholder="YouTube Video URL">
                 </div>
             </div>
         </div>
@@ -30,10 +30,10 @@
                         <div class="input-group">
                             <input type="text" class="form-control" ng-model="keyword" />
                             <span class="input-group-btn">
-                                <a class="btn btn-primary" ng-click="search()">Search</a>
+                                <button class="btn btn-primary" type="submit" ng-click="search()">Search</button>
                             </span>
                         </div>
-                        <input type="checkbox" ng-model="autorepeat" ng-checked="autorepeat" ng-change="testChange()"  /> Auto Repeat Video
+                        <input type="checkbox" ng-model="autorepeat" ng-checked="autorepeat" ng-change="changeAutoRepeat()"  /> Auto Repeat Video
                     </form>
                 </div>
                 <div class="panel-body">

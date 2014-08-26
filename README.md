@@ -7,16 +7,7 @@ Feature:
 - Search Youtube Video (sorted by relevance, view counts, published, rating)
 - Auto Repeat Video
 - Load video by given Youtube video URL
-
-What I learnt using Angular on this sample app:
-- Load Youtube API on Angular run
-- Creating factory
-- Creating simple directive with template
-- Creating controller
-- Creating simple service
-- Adding event listener on factory
-- Using broadcast to communicate with controller
-
+- 
 Missing:
 - e2e Test
 
